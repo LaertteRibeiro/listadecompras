@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lista de Compras 2.0</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="icon" href="./favicon.png">
+
+</head>
+<body>
+
+  <!--Cabeçalho-->
+  <header>
+    <h1>🛒 Lista de Compras</h1>
+    <div>
+      <button id="atualizar">
+        <span class="icone-atualizar">↻</span>
+        <span class="texto-botao">Atualizar</span>
+    </div>
+    <div class="menu-toggle" onclick="toggleMenu()">
+      <div></div>
+      <div></div>
+      <div></div>
+  </div>
+  <nav id="menu">
+      <a href="#">Início</a>
+      <a href="cadastro.html">Novo Item</a>
+      <a href="#">Contato</a>
+  </nav>
+  </header>
+
+  <div class="totais-container">
+    <div class="info-box">
+      <span class="titulo">Comprar</span>
+      <span id="total-itens" class="valor">0</span>
+    </div>
+    <div class="info-box">
+      <span class="titulo">Valor Total</span>
+      <span id="total-valor" class="valor">R$ 0,00</span>
+    </div>
+  </div>
+  
+  <main>
+    <div id="lista" class="lista-itens"></div>
+  </main>
+  
+  <script src="script.js"></script>
+
+  <!-- Rodapé fixo estilo app -->
+<footer class="mobile-footer">
+  <a href="#">
+    <i class="fas fa-home"></i>
+    <span>Início</span>
+  </a>
+  <a href="#">
+    <i class="fas fa-calendar-alt"></i>
+    <span>Agenda</span>
+  </a>
+  <a href="cadastro.html" class="central-btn">
+    <i class="fas fa-plus"></i>
+    <span>Adicionar</span>
+  </a>
+  <a href="#">
+    <i class="fas fa-user"></i>
+    <span>Perfil</span>
+  </a>
+  <a href="#">
+    <i class="fas fa-bell"></i>
+    <span>Notificações</span>
+  </a>
+</footer>
+
+<!-- PWA Config -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#4CAF50">
+<link rel="manifest" href="/ListadeCompras2.0/site.webmanifest">
+
+<!-- iOS meta tags -->
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Lista de Compras">
+<link rel="apple-touch-icon" href="/ListadeCompras2.0/icons/icon-152x152.png">
+
+
+<!-- Register Service Worker -->
+<script>
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('./service-worker.js')
+      .then(registration => {
+        console.log('ServiceWorker registrado com sucesso:', registration);
+      })
+      .catch(err => {
+        console.error('ServiceWorker registro falhou: ', err);
+      });
+  });
+}
+</script>
+
+</body>
+
+</html>

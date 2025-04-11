@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro de Itens</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="./favicon.png">
+</head>
+<body>
+  <div class="container">
+    <h1>✏️ Cadastrar Novo Item</h1>
+    <form id="form-cadastro">
+      <div class="form-group">
+        <label for="categoria">Categoria:</label>
+        <input 
+          type="text" 
+          id="categoria" 
+          name="categoria" 
+          list="categorias"
+          required
+          placeholder="Selecione ou digite uma categoria"
+        >
+        <datalist id="categorias">
+          <!-- Categorias serão carregadas via JavaScript -->
+        </datalist>
+      </div>
+
+      <div class="form-group">
+        <label for="item">Nome do Item:</label>
+        <input 
+          type="text" 
+          id="item" 
+          name="item" 
+          required
+          placeholder="Digite o nome do item"
+        >
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label for="quantidade">Quantidade:</label>
+          <input 
+            type="number" 
+            id="quantidade" 
+            name="quantidade"
+            min="1" 
+            value="1" 
+            required
+          >
+        </div>
+
+        <div class="form-group">
+          <label for="unidade">Unidade de Medida:</label>
+          <select id="unidade" name="unidade" required>
+            <option value="un">un</option>
+            <option value="kg">kg</option>
+            <option value="g">g</option>
+            <option value="L">L</option>
+            <option value="ml">ml</option>
+            <option value="cx">cx</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="preco">Preço (R$):</label>
+          <input 
+            type="number" 
+            id="preco" 
+            name="preco"
+            min="0" 
+            step="0.01" 
+            required placeholder="R$ 0,00"
+          >
+        </div>
+      </div>
+
+      <button type="submit" id="btn-cadastrar">✓ Cadastrar Item</button>
+      <a href="index.html" class="btn-voltar">← Voltar para Lista</a>
+    </form>
+  </div>
+
+  <script src="cadastro.js"></script>
+</body>
+</html>
