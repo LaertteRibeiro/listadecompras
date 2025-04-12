@@ -1,9 +1,8 @@
-<string name="asset_statements">
-  [{
-    \"relation\": [\"delegate_permission/common.handle_all_urls\"],
-    \"target\": {
-      \"namespace\": \"web\",
-      \"site\": \"https://friendly-duckanoo-c4347c.netlify.app\"
-    }
-  }]
-</string>
+[{
+      "relation": ["delegate_permission/common.handle_all_urls"],
+      "target": {
+        "namespace": "android_app",
+        "package_name": "app.netlify.friendly_duckanoo_c4347c.twa",
+        "sha256_cert_fingerprints": ["2C:90:7B:C9:A1:2E:0C:C1:F9:D4:CB:0A:E1:30:C8:B8:EA:5F:E4:9C:7C:45:92:29:FE:94:16:78:DC:A6:12:0E"]
+      }
+    }]
