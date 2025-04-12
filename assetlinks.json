@@ -1,8 +1,0 @@
-[{
-      "relation": ["delegate_permission/common.handle_all_urls"],
-      "target": {
-        "namespace": "android_app",
-        "package_name": "listadecompras.laertteribeiro.twa",
-        "sha256_cert_fingerprints": ["DD:01:92:F1:63:99:83:F4:17:6B:B5:7C:2C:E9:8A:0F:DD:5C:3A:D6:83:90:78:AA:A1:13:76:CE:E6:22:E0:B4"]
-      }
-    }]
